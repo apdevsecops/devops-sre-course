@@ -251,6 +251,11 @@ li{
   margin-top:3px;
 }
 
+.tech-emoji{
+  font-size:48px;
+  margin-bottom:10px;
+}
+
 /* =========================
    DETAILS / SYLLABUS
 ========================= */
@@ -276,7 +281,7 @@ summary{
 }
 
 /* =========================
-   PROGRAM PROCESS
+   PROCESS
 ========================= */
 
 .process-card{
@@ -357,23 +362,6 @@ summary{
   font-size:17px;
 }
 
-.company-list{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:10px;
-  margin:25px 0;
-}
-
-.company{
-  background:white;
-  color:#172554;
-  padding:9px 15px;
-  border-radius:999px;
-  font-weight:800;
-  font-size:14px;
-}
-
 /* =========================
    CONTACT
 ========================= */
@@ -424,7 +412,6 @@ footer{
 @media(max-width:760px){
 
   .grid,
-  .timeline,
   .expertise-grid{
     grid-template-columns:1fr;
   }
@@ -449,14 +436,13 @@ footer{
     padding:25px 18px;
   }
 }
+
 </style>
 </head>
 
 <body>
 
-<!-- =========================
-     HERO
-========================= -->
+<!-- HERO -->
 
 <header class="hero">
 
@@ -484,9 +470,7 @@ Explore Programs
 <a class="btn outline"
 href="https://wa.me/919538716801"
 target="_blank">
-
 💬 WhatsApp: 9538716801
-
 </a>
 
 </div>
@@ -494,9 +478,7 @@ target="_blank">
 </header>
 
 
-<!-- =========================
-     PROGRAMS
-========================= -->
+<!-- PROGRAMS -->
 
 <section class="section" id="programs">
 
@@ -527,25 +509,15 @@ preparing for practical DevOps and SRE roles.
 </p>
 
 <ul>
-
-<li>Linux, Git/GitHub, Java/Spring Boot & Maven</li>
-
+<li>Linux, Git/GitHub, Java/Spring Boot & Maven fundamentals</li>
 <li>CI/CD and AWS application delivery</li>
-
 <li>Docker, Amazon ECR, ECS Fargate, ALB & CloudWatch</li>
-
 <li>Infrastructure as Code with Terraform</li>
-
 <li>DevSecOps with SonarQube, OWASP checks & Trivy</li>
-
 <li>SRE practices: SLI/SLO/SLA, error budgets & incident response</li>
-
 <li>Prometheus, Grafana & OpenTelemetry</li>
-
 <li>Kubernetes, EKS, Helm & Argo CD/GitOps</li>
-
 <li>Responsible AI use for troubleshooting, RCA and runbooks</li>
-
 </ul>
 
 <p class="small">
@@ -557,9 +529,7 @@ transitioning toward DevOps/SRE.
 <a class="btn"
 style="background:#2563eb;color:white"
 href="#flagship">
-
 View Flagship Syllabus
-
 </a>
 
 </div>
@@ -581,21 +551,13 @@ knowledge and want a focused practical upgrade.
 </p>
 
 <ul>
-
 <li>AWS CI/CD + ECS Fargate deployment workflow</li>
-
 <li>Docker, ECR, ALB & CloudWatch</li>
-
 <li>Terraform + DevSecOps security checks</li>
-
 <li>SRE practices, observability, alerting & RCA</li>
-
 <li>Kubernetes/EKS + Helm + GitOps essentials</li>
-
 <li>AI-assisted troubleshooting and runbook drafting</li>
-
 <li>Final architecture review and practical demonstration</li>
-
 </ul>
 
 <p class="small">
@@ -606,9 +568,7 @@ Basic Linux commands, Git fundamentals and basic AWS knowledge.
 <a class="btn"
 style="background:#6d28d9;color:white"
 href="#crash">
-
 View Crash Syllabus
-
 </a>
 
 </div>
@@ -620,9 +580,7 @@ View Crash Syllabus
 </section>
 
 
-<!-- =========================
-     TECHNOLOGY STACK
-========================= -->
+<!-- TECHNOLOGY STACK -->
 
 <section class="section tech-section">
 
@@ -649,16 +607,20 @@ as an isolated topic.
 <div class="tech-sub">Version Control</div>
 </div>
 
+<!-- JAVA FIXED -->
+
 <div class="tech-card">
-<img src="https://cdn.simpleicons.org/java" alt="Java">
+<div class="tech-emoji">☕</div>
 <span>Java & Maven</span>
 <div class="tech-sub">Application Build</div>
 </div>
 
+<!-- AWS FIXED -->
+
 <div class="tech-card">
-<img src="https://cdn.simpleicons.org/amazonaws" alt="AWS">
+<div class="tech-emoji">☁️</div>
 <span>AWS</span>
-<div class="tech-sub">Cloud</div>
+<div class="tech-sub">Cloud Platform</div>
 </div>
 
 <div class="tech-card">
@@ -680,6 +642,12 @@ as an isolated topic.
 </div>
 
 <div class="tech-card">
+<div class="tech-emoji">🔐</div>
+<span>Trivy & OWASP</span>
+<div class="tech-sub">Security</div>
+</div>
+
+<div class="tech-card">
 <img src="https://cdn.simpleicons.org/prometheus" alt="Prometheus">
 <span>Prometheus</span>
 <div class="tech-sub">Monitoring</div>
@@ -689,6 +657,12 @@ as an isolated topic.
 <img src="https://cdn.simpleicons.org/grafana" alt="Grafana">
 <span>Grafana</span>
 <div class="tech-sub">Dashboards</div>
+</div>
+
+<div class="tech-card">
+<div class="tech-emoji">📡</div>
+<span>OpenTelemetry</span>
+<div class="tech-sub">Tracing</div>
 </div>
 
 <div class="tech-card">
@@ -704,25 +678,13 @@ as an isolated topic.
 </div>
 
 <div class="tech-card">
-<img src="https://cdn.simpleicons.org/argo" alt="Argo CD">
+<div class="tech-emoji">🚀</div>
 <span>Argo CD</span>
 <div class="tech-sub">GitOps</div>
 </div>
 
 <div class="tech-card">
-<div style="font-size:48px;margin-bottom:10px">🔐</div>
-<span>Trivy & OWASP</span>
-<div class="tech-sub">Security</div>
-</div>
-
-<div class="tech-card">
-<div style="font-size:48px;margin-bottom:10px">📡</div>
-<span>OpenTelemetry</span>
-<div class="tech-sub">Tracing</div>
-</div>
-
-<div class="tech-card">
-<div style="font-size:48px;margin-bottom:10px">🤖</div>
+<div class="tech-emoji">🤖</div>
 <span>AI Operations</span>
 <div class="tech-sub">Troubleshooting & RCA</div>
 </div>
@@ -734,9 +696,7 @@ as an isolated topic.
 </section>
 
 
-<!-- =========================
-     PROJECTS
-========================= -->
+<!-- PROJECTS -->
 
 <section class="section" style="background:#eef6ff">
 
@@ -752,124 +712,76 @@ connected infrastructure, delivery, security and reliability projects.
 <div class="grid">
 
 <div class="card">
-
 <h3>Project 1 — CI/CD Pipeline</h3>
-
-<p>
-Build, test and automate delivery for a Spring Boot application.
-</p>
-
+<p>Build, test and automate delivery for a Spring Boot application.</p>
 <p class="small">
-<strong>
-GitHub • Maven • AWS CodeBuild • CodePipeline
-</strong>
+<strong>GitHub • Maven • AWS CodeBuild • CodePipeline</strong>
 </p>
-
 </div>
 
-
 <div class="card">
-
 <h3>Project 2 — Container Deployment</h3>
-
 <p>
 Containerize the application and deploy it on Amazon ECS with health checks
 and rollback.
 </p>
-
 <p class="small">
-<strong>
-Docker • ECR • ECS Fargate • ALB • CloudWatch
-</strong>
+<strong>Docker • ECR • ECS Fargate • ALB • CloudWatch</strong>
 </p>
-
 </div>
 
-
 <div class="card">
-
 <h3>Project 3 — Infrastructure as Code</h3>
-
 <p>
 Provision and manage cloud infrastructure using reusable Terraform configurations.
 </p>
-
 <p class="small">
-<strong>
-Terraform • AWS • IAM • ECR • ECS
-</strong>
+<strong>Terraform • AWS • IAM • ECR • ECS</strong>
 </p>
-
 </div>
 
-
 <div class="card">
-
 <h3>Project 4 — Secure Delivery Pipeline</h3>
-
 <p>
 Add code quality, dependency and container security checks to the CI/CD workflow.
 </p>
-
 <p class="small">
-<strong>
-SonarQube • OWASP Dependency-Check • Trivy
-</strong>
+<strong>SonarQube • OWASP Dependency-Check • Trivy</strong>
 </p>
-
 </div>
 
-
 <div class="card">
-
 <h3>Project 5 — Observability & SRE</h3>
-
 <p>
 Build dashboards and alerts, work with SLI/SLO concepts and simulate
 incident analysis.
 </p>
-
 <p class="small">
-<strong>
-Prometheus • Grafana • OpenTelemetry • CloudWatch
-</strong>
+<strong>Prometheus • Grafana • OpenTelemetry • CloudWatch</strong>
 </p>
-
 </div>
 
-
 <div class="card">
-
 <h3>Project 6 — Kubernetes & GitOps</h3>
-
 <p>
 Deploy the application using Kubernetes, Helm and a GitOps-based delivery workflow.
 </p>
-
 <p class="small">
-<strong>
-Kubernetes • EKS • Helm • Argo CD
-</strong>
+<strong>Kubernetes • EKS • Helm • Argo CD</strong>
 </p>
-
 </div>
 
-
 <div class="card" style="grid-column:1/-1">
-
 <h3>Project 7 — AI-Assisted DevOps & SRE Operations</h3>
-
 <p>
 Use AI responsibly for log analysis, troubleshooting, RCA assistance,
 configuration explanation and runbook drafting.
 </p>
-
 <p class="small">
 <strong>Important:</strong>
 AI-generated outputs are reviewed and validated before applying changes
 to production environments.
 </p>
-
 </div>
 
 </div>
@@ -879,9 +791,7 @@ to production environments.
 </section>
 
 
-<!-- =========================
-     HOW PROGRAM WORKS
-========================= -->
+<!-- HOW PROGRAM WORKS -->
 
 <section class="section">
 
@@ -935,9 +845,7 @@ Work through failures, logs, deployment issues and incident scenarios.
 </section>
 
 
-<!-- =========================
-     EXPERTISE
-========================= -->
+<!-- WHY LEARN WITH US -->
 
 <section class="section expertise">
 
@@ -1012,9 +920,7 @@ technical discussions and interviews.
 </section>
 
 
-<!-- =========================
-     FLAGSHIP SYLLABUS
-========================= -->
+<!-- FLAGSHIP SYLLABUS -->
 
 <section class="section" id="flagship">
 
@@ -1026,107 +932,99 @@ technical discussions and interviews.
 5 live hours every week • 80 total live hours • 7 practical projects
 </p>
 
-<details>
-
+<details open>
 <summary>Weeks 1–3 — Foundations + AWS CI/CD</summary>
-
-<p><b>Week 1:</b>
+<p>
+<b>Week 1:</b>
 Linux, shell, permissions, processes; Git/GitHub;
-Spring Boot/Maven Employee API + Actuator.</p>
-
-<p><b>Week 2:</b>
+Spring Boot/Maven Employee API + Actuator.
+</p>
+<p>
+<b>Week 2:</b>
 AWS IAM/ECR, CodeBuild/CodePipeline,
-CI/CD build/test automation and Docker fundamentals.</p>
-
-<p><b>Week 3:</b>
+CI/CD build/test automation and Docker fundamentals.
+</p>
+<p>
+<b>Week 3:</b>
 Dockerize the Employee API;
-Pipeline → Docker → ECR → ECS Fargate.</p>
-
+Pipeline → Docker → ECR → ECS Fargate.
+</p>
 </details>
 
-
 <details>
-
 <summary>Weeks 4–5 — Docker + ECS</summary>
-
-<p><b>Week 4:</b>
-ECS services/tasks/Fargate, ALB, health checks and CloudWatch.</p>
-
-<p><b>Week 5:</b>
-Security Groups, scaling, rollback, troubleshooting and Project 2 demo.</p>
-
+<p>
+<b>Week 4:</b>
+ECS services/tasks/Fargate, ALB, health checks and CloudWatch.
+</p>
+<p>
+<b>Week 5:</b>
+Security Groups, scaling, rollback, troubleshooting and Project 2 demo.
+</p>
 </details>
 
-
 <details>
-
 <summary>Weeks 6–7 — Terraform</summary>
-
-<p><b>Week 6:</b>
-Terraform providers, resources, variables, state, networking and IAM.</p>
-
-<p><b>Week 7:</b>
-Terraform ECR/ECS/ALB, modules and Project 3 demonstration.</p>
-
+<p>
+<b>Week 6:</b>
+Terraform providers, resources, variables, state, networking and IAM.
+</p>
+<p>
+<b>Week 7:</b>
+Terraform ECR/ECS/ALB, modules and Project 3 demonstration.
+</p>
 </details>
 
-
 <details>
-
 <summary>Weeks 8–9 — DevSecOps</summary>
-
-<p><b>Week 8:</b>
-SonarQube, OWASP dependency scanning and quality gates.</p>
-
-<p><b>Week 9:</b>
-Trivy container scanning, security gates, remediation and Project 4 demo.</p>
-
+<p>
+<b>Week 8:</b>
+SonarQube, OWASP dependency scanning and quality gates.
+</p>
+<p>
+<b>Week 9:</b>
+Trivy container scanning, security gates, remediation and Project 4 demo.
+</p>
 </details>
 
-
 <details>
-
 <summary>Weeks 10–12 — SRE + Observability</summary>
-
-<p><b>Week 10:</b>
-SLI/SLO/SLA and error budgets.</p>
-
-<p><b>Week 11:</b>
-CloudWatch, Prometheus, Grafana dashboards and alerting.</p>
-
-<p><b>Week 12:</b>
-OpenTelemetry, tracing, incidents, on-call, RCA, postmortems and Project 5 demo.</p>
-
+<p><b>Week 10:</b> SLI/SLO/SLA and error budgets.</p>
+<p>
+<b>Week 11:</b>
+CloudWatch, Prometheus, Grafana dashboards and alerting.
+</p>
+<p>
+<b>Week 12:</b>
+OpenTelemetry, tracing, incidents, on-call, RCA,
+postmortems and Project 5 demo.
+</p>
 </details>
 
-
 <details>
-
 <summary>Weeks 13–15 — Kubernetes / EKS + GitOps</summary>
-
-<p><b>Week 13:</b>
-Kubernetes architecture, Pods, Deployments, Services, ConfigMaps,
-Secrets and probes.</p>
-
-<p><b>Week 14:</b>
-Helm, HPA, EKS and troubleshooting.</p>
-
-<p><b>Week 15:</b>
-EKS + ECR, Argo CD/GitOps, rollback and Project 6 demonstration.</p>
-
+<p>
+<b>Week 13:</b>
+Kubernetes architecture, Pods, Deployments, Services,
+ConfigMaps, Secrets and probes.
+</p>
+<p>
+<b>Week 14:</b>
+Helm, HPA, EKS and troubleshooting.
+</p>
+<p>
+<b>Week 15:</b>
+EKS + ECR, Argo CD/GitOps, rollback and Project 6 demonstration.
+</p>
 </details>
 
-
 <details>
-
 <summary>Week 16 — AI-Assisted DevOps/SRE + Final Demonstration</summary>
-
 <p>
 AI for Linux/Git/Docker/Terraform/Kubernetes,
 AI-assisted SRE/RCA/runbooks,
 final integrated portfolio demonstration and interview readiness.
 </p>
-
 </details>
 
 </div>
@@ -1134,9 +1032,7 @@ final integrated portfolio demonstration and interview readiness.
 </section>
 
 
-<!-- =========================
-     CRASH SYLLABUS
-========================= -->
+<!-- CRASH SYLLABUS -->
 
 <section class="section" id="crash" style="background:#faf5ff">
 
@@ -1148,60 +1044,51 @@ final integrated portfolio demonstration and interview readiness.
 5 live hours every week • 30 total live hours
 </p>
 
-<details>
-
+<details open>
 <summary>Weeks 1–2 — AWS CI/CD + ECS</summary>
-
-<p><b>Week 1:</b>
+<p>
+<b>Week 1:</b>
 CI/CD architecture, CodeBuild/CodePipeline,
-Docker → ECR → ECS Fargate → ALB.</p>
-
-<p><b>Week 2:</b>
+Docker → ECR → ECS Fargate → ALB.
+</p>
+<p>
+<b>Week 2:</b>
 CloudWatch, health checks, rollback,
-ECS troubleshooting and Capstone 1 demonstration.</p>
-
+ECS troubleshooting and Capstone 1 demonstration.
+</p>
 </details>
 
-
 <details>
-
 <summary>Week 3 — Terraform + DevSecOps</summary>
-
 <p>
 Terraform state and AWS infrastructure;
 SonarQube, OWASP, Trivy,
 security gates and Capstone 2.
 </p>
-
 </details>
 
-
 <details>
-
 <summary>Weeks 4–5 — SRE + Observability + Incidents</summary>
-
-<p><b>Week 4:</b>
+<p>
+<b>Week 4:</b>
 SLI/SLO/SLA, error budgets,
-CloudWatch, Prometheus and Grafana.</p>
-
-<p><b>Week 5:</b>
+CloudWatch, Prometheus and Grafana.
+</p>
+<p>
+<b>Week 5:</b>
 OpenTelemetry, dashboards, alerts,
-incident response, RCA, postmortems and Capstone 3.</p>
-
+incident response, RCA, postmortems and Capstone 3.
+</p>
 </details>
 
-
 <details>
-
 <summary>Week 6 — Kubernetes/EKS + GitOps + AI</summary>
-
 <p>
 Kubernetes/EKS, Helm, HPA,
 Argo CD/GitOps,
 AI-assisted troubleshooting and runbooks,
 final demonstration.
 </p>
-
 </details>
 
 </div>
@@ -1209,9 +1096,7 @@ final demonstration.
 </section>
 
 
-<!-- =========================
-     FAQ
-========================= -->
+<!-- FAQ -->
 
 <section class="section">
 
@@ -1220,53 +1105,38 @@ final demonstration.
 <h2>Frequently Asked Questions</h2>
 
 <details>
-
 <summary>Is this course suitable for beginners?</summary>
-
 <p>
 The Flagship Program is designed to build from practical foundations.
 The Crash Program is intended for learners who already have basic Linux,
 Git and AWS knowledge.
 </p>
-
 </details>
 
-
 <details>
-
 <summary>Is the learning focused on theory or practical work?</summary>
-
 <p>
 The program combines concepts with guided labs,
 project work, troubleshooting and demonstrations.
 </p>
-
 </details>
 
-
 <details>
-
 <summary>Does the course include SRE?</summary>
-
 <p>
 Yes. The curriculum covers practical SRE concepts such as SLIs,
 SLOs, error budgets, observability, alerting,
 incident response, RCA and postmortem practices.
 </p>
-
 </details>
 
-
 <details>
-
 <summary>How is AI covered?</summary>
-
 <p>
 AI is presented as an engineering assistant for troubleshooting,
 analysis and documentation.
 Outputs must be reviewed and validated before production use.
 </p>
-
 </details>
 
 </div>
@@ -1274,9 +1144,7 @@ Outputs must be reviewed and validated before production use.
 </section>
 
 
-<!-- =========================
-     STUDENT CAREER SUCCESS
-========================= -->
+<!-- STUDENT CAREER SUCCESS -->
 
 <section class="section success-section">
 
@@ -1294,22 +1162,9 @@ Practical skills that support long-term career growth.
 <strong>
 Over the years, students trained and mentored by us have progressed in their
 IT careers and joined or worked with leading organizations, including
-Mitsubishi, Wipro, Capgemini, Airbus, Dell, Infosys, HCL and others.
+Mitsubishi, Wipro, Capgemini, Airbus, Dell, Infosys, HCL, Accenture and others.
 </strong>
 </p>
-
-<div class="company-list">
-
-<div class="company">Mitsubishi</div>
-<div class="company">Wipro</div>
-<div class="company">Capgemini</div>
-<div class="company">Airbus</div>
-<div class="company">Dell</div>
-<div class="company">Infosys</div>
-<div class="company">HCL</div>
-<div class="company">And Many More</div>
-
-</div>
 
 <p>
 Our focus is on practical, industry-relevant learning, real-world projects
@@ -1324,9 +1179,7 @@ DevOps roles.
 </section>
 
 
-<!-- =========================
-     CONTACT
-========================= -->
+<!-- CONTACT -->
 
 <section class="section" id="register" style="background:#eef2ff">
 
@@ -1354,9 +1207,7 @@ syllabus and upcoming batch information.
 style="background:#16a34a;color:white"
 href="https://wa.me/919538716801?text=Hi%2C%20I%20am%20interested%20in%20the%20DevOps%20%2B%20DevSecOps%20%2B%20SRE%20course."
 target="_blank">
-
 💬 WhatsApp: 9538716801
-
 </a>
 
 <p class="note">
@@ -1370,9 +1221,7 @@ You can contact directly on WhatsApp for course and batch details.
 </section>
 
 
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- FOOTER -->
 
 <footer>
 

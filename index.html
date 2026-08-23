@@ -4,22 +4,27 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>DevOps • DevSecOps • SRE — 2026 Programs</title>
+<title>DevOps • DevSecOps • SRE | Practical Training Programs</title>
 
 <style>
 :root{
   --ink:#172554;
   --blue:#2563eb;
+  --blue2:#1d4ed8;
   --purple:#6d28d9;
   --muted:#64748b;
   --bg:#f8fafc;
-  --card:#fff;
+  --card:#ffffff;
   --line:#e2e8f0;
-  --green:#15803d
+  --green:#16a34a;
 }
 
 *{
-  box-sizing:border-box
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
 }
 
 body{
@@ -27,95 +32,120 @@ body{
   font-family:Inter,Arial,sans-serif;
   background:var(--bg);
   color:#1e293b;
-  line-height:1.55
+  line-height:1.6;
 }
 
 a{
   text-decoration:none;
-  color:inherit
+  color:inherit;
 }
 
 .wrap{
-  max-width:1100px;
+  max-width:1150px;
   margin:auto;
-  padding:0 20px
+  padding:0 20px;
 }
 
+/* =========================
+   HERO
+========================= */
+
 .hero{
-  background:linear-gradient(135deg,#172554,#1d4ed8);
+  background:
+  radial-gradient(circle at top right,#3b82f655,transparent 35%),
+  linear-gradient(135deg,#0f172a,#172554,#1d4ed8);
   color:white;
-  padding:70px 0 60px;
-  text-align:center
+  padding:80px 0 70px;
+  text-align:center;
 }
 
 .badge{
   display:inline-block;
-  padding:8px 14px;
+  padding:8px 15px;
   border:1px solid #ffffff55;
   border-radius:999px;
-  background:#ffffff14;
+  background:#ffffff12;
   font-weight:700;
   font-size:13px;
-  letter-spacing:.4px
+  letter-spacing:.5px;
 }
 
 h1{
-  font-size:clamp(36px,6vw,64px);
+  font-size:clamp(38px,6vw,66px);
   line-height:1.05;
-  margin:18px 0 14px
+  margin:20px 0 16px;
+  letter-spacing:-1px;
 }
 
 .hero p{
   font-size:19px;
-  max-width:760px;
-  margin:0 auto 28px;
-  color:#dbeafe
+  max-width:780px;
+  margin:0 auto 25px;
+  color:#dbeafe;
+}
+
+.hero-highlight{
+  font-size:15px !important;
+  margin:10px auto 22px !important;
+  color:#bfdbfe !important;
 }
 
 .btn{
   display:inline-block;
   padding:13px 22px;
   border-radius:10px;
-  background:white;
-  color:var(--ink);
   font-weight:800;
   margin:6px;
-  border:2px solid transparent
+  border:2px solid transparent;
+  transition:.25s ease;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 25px #00000025;
 }
 
 .btn.primary{
   background:#facc15;
-  color:#172554
+  color:#172554;
 }
 
 .btn.outline{
   background:transparent;
   color:white;
-  border-color:#ffffff88
+  border-color:#ffffff88;
 }
 
+/* =========================
+   SECTIONS
+========================= */
+
 .section{
-  padding:58px 0
+  padding:65px 0;
 }
 
 .section h2{
   text-align:center;
   color:var(--ink);
-  font-size:32px;
-  margin:0 0 10px
+  font-size:34px;
+  margin:0 0 10px;
 }
 
 .lead{
   text-align:center;
   color:var(--muted);
-  max-width:720px;
-  margin:0 auto 30px
+  max-width:780px;
+  margin:0 auto 35px;
 }
+
+/* =========================
+   CARDS
+========================= */
 
 .grid{
   display:grid;
   grid-template-columns:repeat(2,1fr);
-  gap:22px
+  gap:22px;
 }
 
 .card{
@@ -123,187 +153,327 @@ h1{
   border:1px solid var(--line);
   border-radius:18px;
   padding:28px;
-  box-shadow:0 8px 28px #0f172a0b
+  box-shadow:0 8px 28px #0f172a0b;
+  transition:.25s ease;
+}
+
+.card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 18px 38px #0f172a14;
 }
 
 .card.featured{
-  border:2px solid #2563eb
+  border:2px solid var(--blue);
 }
 
 .card.crash{
-  border:2px solid #7c3aed
+  border:2px solid var(--purple);
 }
 
 .card h3{
   font-size:24px;
-  margin:0 0 5px;
-  color:var(--ink)
+  margin:0 0 7px;
+  color:var(--ink);
 }
 
 .meta{
   font-weight:800;
   color:var(--blue);
-  margin-bottom:18px
+  margin-bottom:18px;
 }
 
 .crash .meta{
-  color:var(--purple)
+  color:var(--purple);
 }
 
 ul{
-  padding-left:20px
+  padding-left:20px;
 }
 
 li{
-  margin:7px 0
+  margin:8px 0;
 }
 
-.tag{
-  display:inline-block;
-  background:#eff6ff;
-  color:#1d4ed8;
-  padding:5px 9px;
-  border-radius:7px;
-  margin:3px;
-  font-size:12px;
-  font-weight:700
+.small{
+  font-size:13px;
 }
 
-.purple{
-  background:#f5f3ff;
-  color:#6d28d9
+/* =========================
+   TECHNOLOGY SECTION
+========================= */
+
+.tech-section{
+  background:#ffffff;
 }
 
-.timeline{
+.tech-grid{
   display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:12px;
-  margin-top:25px
+  grid-template-columns:repeat(5,1fr);
+  gap:16px;
 }
 
-.week{
-  background:white;
+.tech-card{
+  background:#fff;
   border:1px solid var(--line);
-  border-radius:12px;
-  padding:15px
+  border-radius:16px;
+  padding:20px 12px;
+  text-align:center;
+  transition:.25s ease;
+  min-height:145px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
 }
 
-.week strong{
-  color:var(--blue)
+.tech-card:hover{
+  transform:translateY(-5px);
+  border-color:#93c5fd;
+  box-shadow:0 14px 30px #0f172a12;
 }
+
+.tech-card img{
+  width:52px;
+  height:52px;
+  object-fit:contain;
+  margin-bottom:10px;
+}
+
+.tech-card span{
+  font-weight:800;
+  color:var(--ink);
+  font-size:14px;
+}
+
+.tech-sub{
+  color:var(--muted);
+  font-size:11px;
+  margin-top:3px;
+}
+
+/* =========================
+   DETAILS / SYLLABUS
+========================= */
 
 details{
   background:white;
   border:1px solid var(--line);
-  border-radius:12px;
-  margin:10px 0;
-  padding:16px 18px
+  border-radius:14px;
+  margin:12px 0;
+  padding:17px 20px;
+  transition:.2s ease;
+}
+
+details:hover{
+  border-color:#93c5fd;
 }
 
 summary{
   cursor:pointer;
   font-weight:800;
-  color:var(--ink)
+  color:var(--ink);
+  font-size:16px;
 }
 
+/* =========================
+   PROGRAM PROCESS
+========================= */
+
+.process-card{
+  text-align:center;
+}
+
+.process-icon{
+  font-size:36px;
+  margin-bottom:8px;
+}
+
+/* =========================
+   EXPERTISE
+========================= */
+
+.expertise{
+  background:linear-gradient(135deg,#eef6ff,#f8fafc);
+}
+
+.expertise-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.expertise-card{
+  background:white;
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:22px;
+  transition:.25s ease;
+}
+
+.expertise-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 15px 30px #0f172a10;
+}
+
+.expertise-icon{
+  font-size:30px;
+}
+
+.expertise-card h3{
+  color:var(--ink);
+  margin:10px 0 7px;
+}
+
+/* =========================
+   STUDENT SUCCESS
+========================= */
+
+.success-section{
+  background:linear-gradient(135deg,#172554,#1e40af);
+  color:white;
+}
+
+.success-section h2{
+  color:white;
+}
+
+.success-section .lead{
+  color:#bfdbfe;
+}
+
+.success-box{
+  max-width:900px;
+  margin:auto;
+  background:#ffffff12;
+  border:1px solid #ffffff22;
+  border-radius:22px;
+  padding:35px;
+  text-align:center;
+  backdrop-filter:blur(8px);
+}
+
+.success-box p{
+  color:#e0e7ff;
+  font-size:17px;
+}
+
+.company-list{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:10px;
+  margin:25px 0;
+}
+
+.company{
+  background:white;
+  color:#172554;
+  padding:9px 15px;
+  border-radius:999px;
+  font-weight:800;
+  font-size:14px;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
 .formbox{
-  max-width:700px;
+  max-width:720px;
   margin:auto;
   background:white;
   border:1px solid var(--line);
-  border-radius:18px;
-  padding:28px;
-  box-shadow:0 8px 28px #0f172a0b
-}
-
-label{
-  display:block;
-  font-weight:700;
-  margin:14px 0 6px
-}
-
-input,
-select,
-textarea{
-  width:100%;
-  padding:12px;
-  border:1px solid #cbd5e1;
-  border-radius:9px;
-  font:inherit
-}
-
-textarea{
-  min-height:100px
-}
-
-.submit{
-  margin-top:18px;
-  width:100%;
-  border:0;
-  border-radius:10px;
-  padding:14px;
-  background:var(--blue);
-  color:white;
-  font-weight:800;
-  font-size:16px;
-  cursor:pointer
+  border-radius:20px;
+  padding:35px;
+  box-shadow:0 10px 35px #0f172a10;
 }
 
 .note{
-  font-size:12px;
+  font-size:13px;
   color:var(--muted);
   text-align:center;
-  margin-top:12px
+  margin-top:12px;
 }
+
+/* =========================
+   FOOTER
+========================= */
 
 footer{
   background:#0f172a;
   color:#cbd5e1;
   text-align:center;
-  padding:30px
+  padding:35px 20px;
 }
 
-.small{
-  font-size:13px
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:900px){
+
+  .tech-grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  .expertise-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
 }
 
 @media(max-width:760px){
 
   .grid,
-  .timeline{
-    grid-template-columns:1fr
+  .timeline,
+  .expertise-grid{
+    grid-template-columns:1fr;
+  }
+
+  .tech-grid{
+    grid-template-columns:repeat(2,1fr);
   }
 
   .hero{
-    padding:52px 0
+    padding:60px 0;
   }
 
   .section{
-    padding:42px 0
+    padding:48px 0;
   }
 
+  .section h2{
+    font-size:28px;
+  }
+
+  .success-box{
+    padding:25px 18px;
+  }
 }
 </style>
 </head>
 
 <body>
 
+<!-- =========================
+     HERO
+========================= -->
+
 <header class="hero">
 
 <div class="wrap">
 
-<span class="badge">2026 PROFESSIONAL PROGRAMS</span>
+<span class="badge">2026 PROFESSIONAL TRAINING PROGRAMS</span>
 
 <h1>DEVOPS • DEVSECOPS • SRE</h1>
 
 <p>
-Learn by building production-style cloud applications, delivery pipelines and
-observability workflows using industry-relevant tools.
+Learn by building production-style cloud applications, delivery pipelines,
+secure automation and observability workflows using industry-relevant tools.
 </p>
 
-<p style="font-size:15px;margin:10px auto 20px;color:#bfdbfe">
+<p class="hero-highlight">
 <strong>
-Practical labs • Production-style projects • Troubleshooting scenarios • Project reviews
+Practical Labs • Production-Style Projects • Troubleshooting Scenarios • Project Reviews
 </strong>
 </p>
 
@@ -314,13 +484,19 @@ Explore Programs
 <a class="btn outline"
 href="https://wa.me/919538716801"
 target="_blank">
+
 💬 WhatsApp: 9538716801
+
 </a>
 
 </div>
 
 </header>
 
+
+<!-- =========================
+     PROGRAMS
+========================= -->
 
 <section class="section" id="programs">
 
@@ -329,12 +505,11 @@ target="_blank">
 <h2>Choose Your Program</h2>
 
 <p class="lead">
-Two learning paths designed for different levels of experience.
+Two practical learning paths designed for different levels of experience
+and career goals.
 </p>
 
 <div class="grid">
-
-<!-- FLAGSHIP -->
 
 <div class="card featured">
 
@@ -347,13 +522,13 @@ Two learning paths designed for different levels of experience.
 <p>
 <strong>
 Designed for learners building strong DevOps foundations and professionals
-preparing for practical DevOps/SRE roles.
+preparing for practical DevOps and SRE roles.
 </strong>
 </p>
 
 <ul>
 
-<li>Linux, Git/GitHub, Java/Spring Boot & Maven fundamentals</li>
+<li>Linux, Git/GitHub, Java/Spring Boot & Maven</li>
 
 <li>CI/CD and AWS application delivery</li>
 
@@ -373,16 +548,13 @@ preparing for practical DevOps/SRE roles.
 
 </ul>
 
-<p style="font-size:13px;color:#64748b">
-
+<p class="small">
 <strong>Suitable for:</strong>
-
 Freshers, developers, system/cloud professionals and IT professionals
 transitioning toward DevOps/SRE.
-
 </p>
 
-<a class="btn primary"
+<a class="btn"
 style="background:#2563eb;color:white"
 href="#flagship">
 
@@ -393,8 +565,6 @@ View Flagship Syllabus
 </div>
 
 
-<!-- CRASH COURSE -->
-
 <div class="card crash">
 
 <h3>⚡ Professional Crash Program</h3>
@@ -404,12 +574,10 @@ View Flagship Syllabus
 </div>
 
 <p>
-
 <strong>
 Designed for working professionals who already have basic Linux, Git and AWS
 knowledge and want a focused practical upgrade.
 </strong>
-
 </p>
 
 <ul>
@@ -426,16 +594,13 @@ knowledge and want a focused practical upgrade.
 
 <li>AI-assisted troubleshooting and runbook drafting</li>
 
-<li>Final architecture review and practical demo</li>
+<li>Final architecture review and practical demonstration</li>
 
 </ul>
 
-<p style="font-size:13px;color:#64748b">
-
+<p class="small">
 <strong>Recommended prerequisites:</strong>
-
 Basic Linux commands, Git fundamentals and basic AWS knowledge.
-
 </p>
 
 <a class="btn"
@@ -455,7 +620,123 @@ View Crash Syllabus
 </section>
 
 
-<!-- PROJECTS -->
+<!-- =========================
+     TECHNOLOGY STACK
+========================= -->
+
+<section class="section tech-section">
+
+<div class="wrap">
+
+<h2>Technologies You Will Work With</h2>
+
+<p class="lead">
+Learn modern tools in connected workflows instead of studying each technology
+as an isolated topic.
+</p>
+
+<div class="tech-grid">
+
+<div class="tech-card">
+<img src="https://cdn.simpleicons.org/linux" alt="Linux">
+<span>Linux</span>
+<div class="tech-sub">Foundation</div>
+</div>
+
+<div class="tech-card">
+<img src="https://cdn.simpleicons.org/git" alt="Git">
+<span>Git & GitHub</span>
+<div class="tech-sub">Version Control</div>
+</div>
+
+<div class="tech-card">
+<img src="https://cdn.simpleicons.org/java" alt="Java">
+<span>Java & Maven</span>
+<div class="tech-sub">Application Build</div>
+</div>
+
+<div class="tech-card">
+<img src="https://cdn.simpleicons.org/amazonaws" alt="AWS">
+<span>AWS</span>
+<div class="tech-sub">Cloud</div>
+</div>
+
+<div class="tech-card">
+<img src="https://cdn.simpleicons.org/docker" alt="Docker">
+<span>Docker</span>
+<div class="tech-sub">Containers</div>
+</div>
+
+<div class="tech-card">
+<img src="https://cdn.simpleicons.org/terraform" alt="Terraform">
+<span>Terraform</span>
+<div class="tech-sub">Infrastructure as Code</div>
+</div>
+
+<div class="tech-card">
+<img src="https://cdn.simpleicons.org/sonarqube" alt="SonarQube">
+<span>SonarQube</span>
+<div class="tech-sub">Code Quality</div>
+</div>
+
+<div class="tech-card">
+<img src="https://cdn.simpleicons.org/prometheus" alt="Prometheus">
+<span>Prometheus</span>
+<div class="tech-sub">Monitoring</div>
+</div>
+
+<div class="tech-card">
+<img src="https://cdn.simpleicons.org/grafana" alt="Grafana">
+<span>Grafana</span>
+<div class="tech-sub">Dashboards</div>
+</div>
+
+<div class="tech-card">
+<img src="https://cdn.simpleicons.org/kubernetes" alt="Kubernetes">
+<span>Kubernetes</span>
+<div class="tech-sub">Orchestration</div>
+</div>
+
+<div class="tech-card">
+<img src="https://cdn.simpleicons.org/helm" alt="Helm">
+<span>Helm</span>
+<div class="tech-sub">Kubernetes Packages</div>
+</div>
+
+<div class="tech-card">
+<img src="https://cdn.simpleicons.org/argo" alt="Argo CD">
+<span>Argo CD</span>
+<div class="tech-sub">GitOps</div>
+</div>
+
+<div class="tech-card">
+<div style="font-size:48px;margin-bottom:10px">🔐</div>
+<span>Trivy & OWASP</span>
+<div class="tech-sub">Security</div>
+</div>
+
+<div class="tech-card">
+<div style="font-size:48px;margin-bottom:10px">📡</div>
+<span>OpenTelemetry</span>
+<div class="tech-sub">Tracing</div>
+</div>
+
+<div class="tech-card">
+<div style="font-size:48px;margin-bottom:10px">🤖</div>
+<span>AI Operations</span>
+<div class="tech-sub">Troubleshooting & RCA</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     PROJECTS
+========================= -->
 
 <section class="section" style="background:#eef6ff">
 
@@ -464,14 +745,11 @@ View Crash Syllabus
 <h2>What You Will Build</h2>
 
 <p class="lead">
-
-The flagship journey is structured around a production-style application and
+The Flagship journey is structured around a production-style application and
 connected infrastructure, delivery, security and reliability projects.
-
 </p>
 
 <div class="grid">
-
 
 <div class="card">
 
@@ -482,11 +760,9 @@ Build, test and automate delivery for a Spring Boot application.
 </p>
 
 <p class="small">
-
 <strong>
 GitHub • Maven • AWS CodeBuild • CodePipeline
 </strong>
-
 </p>
 
 </div>
@@ -497,15 +773,14 @@ GitHub • Maven • AWS CodeBuild • CodePipeline
 <h3>Project 2 — Container Deployment</h3>
 
 <p>
-Containerize the application and deploy it on Amazon ECS with health checks and rollback.
+Containerize the application and deploy it on Amazon ECS with health checks
+and rollback.
 </p>
 
 <p class="small">
-
 <strong>
 Docker • ECR • ECS Fargate • ALB • CloudWatch
 </strong>
-
 </p>
 
 </div>
@@ -520,11 +795,9 @@ Provision and manage cloud infrastructure using reusable Terraform configuration
 </p>
 
 <p class="small">
-
 <strong>
 Terraform • AWS • IAM • ECR • ECS
 </strong>
-
 </p>
 
 </div>
@@ -539,11 +812,9 @@ Add code quality, dependency and container security checks to the CI/CD workflow
 </p>
 
 <p class="small">
-
 <strong>
 SonarQube • OWASP Dependency-Check • Trivy
 </strong>
-
 </p>
 
 </div>
@@ -554,15 +825,14 @@ SonarQube • OWASP Dependency-Check • Trivy
 <h3>Project 5 — Observability & SRE</h3>
 
 <p>
-Build dashboards and alerts, work with SLI/SLO concepts and simulate incident analysis.
+Build dashboards and alerts, work with SLI/SLO concepts and simulate
+incident analysis.
 </p>
 
 <p class="small">
-
 <strong>
 Prometheus • Grafana • OpenTelemetry • CloudWatch
 </strong>
-
 </p>
 
 </div>
@@ -577,11 +847,9 @@ Deploy the application using Kubernetes, Helm and a GitOps-based delivery workfl
 </p>
 
 <p class="small">
-
 <strong>
 Kubernetes • EKS • Helm • Argo CD
 </strong>
-
 </p>
 
 </div>
@@ -597,12 +865,9 @@ configuration explanation and runbook drafting.
 </p>
 
 <p class="small">
-
 <strong>Important:</strong>
-
 AI-generated outputs are reviewed and validated before applying changes
 to production environments.
-
 </p>
 
 </div>
@@ -614,7 +879,9 @@ to production environments.
 </section>
 
 
-<!-- HOW PROGRAM WORKS -->
+<!-- =========================
+     HOW PROGRAM WORKS
+========================= -->
 
 <section class="section">
 
@@ -623,67 +890,42 @@ to production environments.
 <h2>How the Program Works</h2>
 
 <p class="lead">
-
-The program is designed to connect concepts, hands-on practice and
-troubleshooting into larger practical projects.
-
+The learning journey connects concepts, hands-on practice, troubleshooting
+and project work.
 </p>
 
 <div class="grid">
 
-<div class="card">
-
-<h3>🧠 Learn</h3>
-
+<div class="card process-card">
+<div class="process-icon">🧠</div>
+<h3>Learn</h3>
 <p>
 Understand the concept, architecture and engineering purpose behind each tool.
 </p>
-
 </div>
 
-
-<div class="card">
-
-<h3>💻 Practice</h3>
-
+<div class="card process-card">
+<div class="process-icon">💻</div>
+<h3>Practice</h3>
 <p>
 Complete guided hands-on labs and configuration exercises.
 </p>
-
 </div>
 
-
-<div class="card">
-
-<h3>🔧 Build</h3>
-
+<div class="card process-card">
+<div class="process-icon">🔧</div>
+<h3>Build</h3>
 <p>
 Connect individual skills into larger production-style projects.
 </p>
-
 </div>
 
-
-<div class="card">
-
-<h3>🚨 Troubleshoot</h3>
-
+<div class="card process-card">
+<div class="process-icon">🚨</div>
+<h3>Troubleshoot</h3>
 <p>
-Work through common failures, logs, deployment issues and incident scenarios.
+Work through failures, logs, deployment issues and incident scenarios.
 </p>
-
-</div>
-
-
-<div class="card" style="grid-column:1/-1">
-
-<h3>🎯 Review & Demonstrate</h3>
-
-<p>
-Review project architecture and demonstrate key workflows at the end of
-major modules.
-</p>
-
 </div>
 
 </div>
@@ -693,37 +935,75 @@ major modules.
 </section>
 
 
-<!-- LEARNING OUTCOMES -->
+<!-- =========================
+     EXPERTISE
+========================= -->
 
-<section class="section" style="background:#f8fafc">
+<section class="section expertise">
 
 <div class="wrap">
 
-<h2>By the End of the Flagship Program</h2>
+<h2>Why Learn With Us?</h2>
 
-<div class="card" style="max-width:900px;margin:auto">
+<p class="lead">
+A practical learning approach focused on the skills and thinking required
+to work with modern cloud and DevOps environments.
+</p>
 
-<ul>
+<div class="expertise-grid">
 
-<li>Build and troubleshoot CI/CD pipelines</li>
+<div class="expertise-card">
+<div class="expertise-icon">🏗️</div>
+<h3>Production-Style Learning</h3>
+<p>
+Learn how tools connect in practical delivery workflows instead of studying
+commands in isolation.
+</p>
+</div>
 
-<li>Containerize applications and deploy workloads on AWS</li>
+<div class="expertise-card">
+<div class="expertise-icon">🔧</div>
+<h3>Troubleshooting Focus</h3>
+<p>
+Practice investigating logs, build failures, deployment issues and
+operational scenarios.
+</p>
+</div>
 
-<li>Provision infrastructure using Terraform</li>
+<div class="expertise-card">
+<div class="expertise-icon">🔐</div>
+<h3>DevSecOps Integration</h3>
+<p>
+Understand how quality and security checks fit into modern software delivery.
+</p>
+</div>
 
-<li>Integrate security and quality checks into delivery workflows</li>
+<div class="expertise-card">
+<div class="expertise-icon">📊</div>
+<h3>DevOps + SRE Together</h3>
+<p>
+Learn automation, observability, reliability, incident workflows and
+operational thinking.
+</p>
+</div>
 
-<li>Apply basic SRE practices using SLI/SLO concepts and incident workflows</li>
+<div class="expertise-card">
+<div class="expertise-icon">🤖</div>
+<h3>AI-Assisted Operations</h3>
+<p>
+Use AI responsibly for troubleshooting, RCA analysis and runbook drafting,
+with human validation.
+</p>
+</div>
 
-<li>Build dashboards, alerts and telemetry workflows</li>
-
-<li>Deploy applications on Kubernetes using Helm and GitOps practices</li>
-
-<li>
-Use AI responsibly to assist troubleshooting, RCA and operational documentation
-</li>
-
-</ul>
+<div class="expertise-card">
+<div class="expertise-icon">🎯</div>
+<h3>Career-Focused Projects</h3>
+<p>
+Build practical projects and understand the architecture behind them for
+technical discussions and interviews.
+</p>
+</div>
 
 </div>
 
@@ -732,7 +1012,9 @@ Use AI responsibly to assist troubleshooting, RCA and operational documentation
 </section>
 
 
-<!-- FLAGSHIP SYLLABUS -->
+<!-- =========================
+     FLAGSHIP SYLLABUS
+========================= -->
 
 <section class="section" id="flagship">
 
@@ -741,31 +1023,24 @@ Use AI responsibly to assist troubleshooting, RCA and operational documentation
 <h2>⭐ Flagship — 16 Week Syllabus</h2>
 
 <p class="lead">
-5 live hours every week.
+5 live hours every week • 80 total live hours • 7 practical projects
 </p>
-
 
 <details>
 
 <summary>Weeks 1–3 — Foundations + AWS CI/CD</summary>
 
-<p>
-<b>Week 1:</b>
+<p><b>Week 1:</b>
 Linux, shell, permissions, processes; Git/GitHub;
-Spring Boot/Maven Employee API + Actuator.
-</p>
+Spring Boot/Maven Employee API + Actuator.</p>
 
-<p>
-<b>Week 2:</b>
+<p><b>Week 2:</b>
 AWS IAM/ECR, CodeBuild/CodePipeline,
-CI/CD build/test automation, Docker fundamentals.
-</p>
+CI/CD build/test automation and Docker fundamentals.</p>
 
-<p>
-<b>Week 3:</b>
+<p><b>Week 3:</b>
 Dockerize the Employee API;
-Pipeline → Docker → ECR → ECS Fargate.
-</p>
+Pipeline → Docker → ECR → ECS Fargate.</p>
 
 </details>
 
@@ -774,15 +1049,11 @@ Pipeline → Docker → ECR → ECS Fargate.
 
 <summary>Weeks 4–5 — Docker + ECS</summary>
 
-<p>
-<b>Week 4:</b>
-ECS services/tasks/Fargate, ALB, health checks, CloudWatch.
-</p>
+<p><b>Week 4:</b>
+ECS services/tasks/Fargate, ALB, health checks and CloudWatch.</p>
 
-<p>
-<b>Week 5:</b>
-Security Groups, scaling, rollback, troubleshooting and Project 2 demo.
-</p>
+<p><b>Week 5:</b>
+Security Groups, scaling, rollback, troubleshooting and Project 2 demo.</p>
 
 </details>
 
@@ -791,15 +1062,11 @@ Security Groups, scaling, rollback, troubleshooting and Project 2 demo.
 
 <summary>Weeks 6–7 — Terraform</summary>
 
-<p>
-<b>Week 6:</b>
-Terraform providers, resources, variables, state, networking and IAM.
-</p>
+<p><b>Week 6:</b>
+Terraform providers, resources, variables, state, networking and IAM.</p>
 
-<p>
-<b>Week 7:</b>
-Terraform ECR/ECS/ALB, modules and Project 3 demo.
-</p>
+<p><b>Week 7:</b>
+Terraform ECR/ECS/ALB, modules and Project 3 demonstration.</p>
 
 </details>
 
@@ -808,15 +1075,11 @@ Terraform ECR/ECS/ALB, modules and Project 3 demo.
 
 <summary>Weeks 8–9 — DevSecOps</summary>
 
-<p>
-<b>Week 8:</b>
-SonarQube, OWASP dependency scanning and quality gates.
-</p>
+<p><b>Week 8:</b>
+SonarQube, OWASP dependency scanning and quality gates.</p>
 
-<p>
-<b>Week 9:</b>
-Trivy container scanning, security gates, remediation and Project 4 demo.
-</p>
+<p><b>Week 9:</b>
+Trivy container scanning, security gates, remediation and Project 4 demo.</p>
 
 </details>
 
@@ -825,21 +1088,14 @@ Trivy container scanning, security gates, remediation and Project 4 demo.
 
 <summary>Weeks 10–12 — SRE + Observability</summary>
 
-<p>
-<b>Week 10:</b>
-SLI/SLO/SLA and error budgets.
-</p>
+<p><b>Week 10:</b>
+SLI/SLO/SLA and error budgets.</p>
 
-<p>
-<b>Week 11:</b>
-CloudWatch, Prometheus, Grafana dashboards and alerting.
-</p>
+<p><b>Week 11:</b>
+CloudWatch, Prometheus, Grafana dashboards and alerting.</p>
 
-<p>
-<b>Week 12:</b>
-OpenTelemetry, tracing, incidents, on-call, RCA,
-postmortem and Project 5 demo.
-</p>
+<p><b>Week 12:</b>
+OpenTelemetry, tracing, incidents, on-call, RCA, postmortems and Project 5 demo.</p>
 
 </details>
 
@@ -848,33 +1104,27 @@ postmortem and Project 5 demo.
 
 <summary>Weeks 13–15 — Kubernetes / EKS + GitOps</summary>
 
-<p>
-<b>Week 13:</b>
-Kubernetes architecture, Pods, Deployments, Services,
-ConfigMaps, Secrets and probes.
-</p>
+<p><b>Week 13:</b>
+Kubernetes architecture, Pods, Deployments, Services, ConfigMaps,
+Secrets and probes.</p>
 
-<p>
-<b>Week 14:</b>
-Helm, HPA, EKS and troubleshooting.
-</p>
+<p><b>Week 14:</b>
+Helm, HPA, EKS and troubleshooting.</p>
 
-<p>
-<b>Week 15:</b>
-EKS + ECR, Argo CD/GitOps, rollback and Project 6 demo.
-</p>
+<p><b>Week 15:</b>
+EKS + ECR, Argo CD/GitOps, rollback and Project 6 demonstration.</p>
 
 </details>
 
 
 <details>
 
-<summary>Week 16 — AI-Assisted DevOps/SRE + Final Demo</summary>
+<summary>Week 16 — AI-Assisted DevOps/SRE + Final Demonstration</summary>
 
 <p>
 AI for Linux/Git/Docker/Terraform/Kubernetes,
 AI-assisted SRE/RCA/runbooks,
-final integrated portfolio demo and interview readiness.
+final integrated portfolio demonstration and interview readiness.
 </p>
 
 </details>
@@ -884,34 +1134,31 @@ final integrated portfolio demo and interview readiness.
 </section>
 
 
-<!-- CRASH SYLLABUS -->
+<!-- =========================
+     CRASH SYLLABUS
+========================= -->
 
 <section class="section" id="crash" style="background:#faf5ff">
 
 <div class="wrap">
 
-<h2>⚡ Crash Course — 6 Week Syllabus</h2>
+<h2>⚡ Crash Program — 6 Week Syllabus</h2>
 
 <p class="lead">
-5 live hours every week. Foundations are assumed and condensed.
+5 live hours every week • 30 total live hours
 </p>
-
 
 <details>
 
 <summary>Weeks 1–2 — AWS CI/CD + ECS</summary>
 
-<p>
-<b>Week 1:</b>
+<p><b>Week 1:</b>
 CI/CD architecture, CodeBuild/CodePipeline,
-Docker → ECR → ECS Fargate → ALB.
-</p>
+Docker → ECR → ECS Fargate → ALB.</p>
 
-<p>
-<b>Week 2:</b>
+<p><b>Week 2:</b>
 CloudWatch, health checks, rollback,
-ECS troubleshooting and Capstone 1 demo.
-</p>
+ECS troubleshooting and Capstone 1 demonstration.</p>
 
 </details>
 
@@ -933,17 +1180,13 @@ security gates and Capstone 2.
 
 <summary>Weeks 4–5 — SRE + Observability + Incidents</summary>
 
-<p>
-<b>Week 4:</b>
+<p><b>Week 4:</b>
 SLI/SLO/SLA, error budgets,
-CloudWatch, Prometheus and Grafana.
-</p>
+CloudWatch, Prometheus and Grafana.</p>
 
-<p>
-<b>Week 5:</b>
+<p><b>Week 5:</b>
 OpenTelemetry, dashboards, alerts,
-incident response, RCA, postmortem and Capstone 3.
-</p>
+incident response, RCA, postmortems and Capstone 3.</p>
 
 </details>
 
@@ -956,7 +1199,7 @@ incident response, RCA, postmortem and Capstone 3.
 Kubernetes/EKS, Helm, HPA,
 Argo CD/GitOps,
 AI-assisted troubleshooting and runbooks,
-final demo.
+final demonstration.
 </p>
 
 </details>
@@ -966,77 +1209,15 @@ final demo.
 </section>
 
 
-<!-- WHY PROGRAM -->
-
-<section class="section">
-
-<div class="wrap">
-
-<h2>Why This Program?</h2>
-
-<div class="grid">
-
-
-<div class="card">
-
-<h3>☁️ Cloud & Automation</h3>
-
-<p>
-AWS, Docker, ECS, Terraform and CI/CD workflows.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<h3>🔐 DevSecOps</h3>
-
-<p>
-Security scanning, quality gates and remediation integrated into delivery.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<h3>📈 SRE Practices & Reliability</h3>
-
-<p>
-SLI/SLO concepts, observability, alerting,
-incident response, RCA and postmortems.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<h3>🤖 AI-Assisted Operations</h3>
-
-<p>
-Practical AI use for troubleshooting, RCA,
-automation and runbooks with human validation.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- FAQ -->
+<!-- =========================
+     FAQ
+========================= -->
 
 <section class="section">
 
 <div class="wrap">
 
 <h2>Frequently Asked Questions</h2>
-
 
 <details>
 
@@ -1093,23 +1274,74 @@ Outputs must be reviewed and validated before production use.
 </section>
 
 
-<!-- CONTACT -->
+<!-- =========================
+     STUDENT CAREER SUCCESS
+========================= -->
+
+<section class="section success-section">
+
+<div class="wrap">
+
+<h2>⭐ Student Career Success</h2>
+
+<p class="lead">
+Practical skills that support long-term career growth.
+</p>
+
+<div class="success-box">
+
+<p>
+<strong>
+Over the years, students trained and mentored by us have progressed in their
+IT careers and joined or worked with leading organizations, including
+Mitsubishi, Wipro, Capgemini, Airbus, Dell, Infosys, HCL and others.
+</strong>
+</p>
+
+<div class="company-list">
+
+<div class="company">Mitsubishi</div>
+<div class="company">Wipro</div>
+<div class="company">Capgemini</div>
+<div class="company">Airbus</div>
+<div class="company">Dell</div>
+<div class="company">Infosys</div>
+<div class="company">HCL</div>
+<div class="company">And Many More</div>
+
+</div>
+
+<p>
+Our focus is on practical, industry-relevant learning, real-world projects
+and troubleshooting skills to help learners prepare for modern IT and
+DevOps roles.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
 
 <section class="section" id="register" style="background:#eef2ff">
 
 <div class="wrap">
 
-<h2>Interested? Contact on WhatsApp</h2>
+<h2>Interested in Joining?</h2>
 
 <p class="lead">
-For course details, batch information and registration,
+For course details, upcoming batches and registration information,
 contact directly on WhatsApp.
 </p>
 
-
 <div class="formbox" style="text-align:center">
 
-<h3 style="font-size:24px;color:#172554;margin-top:0">
+<h3 style="font-size:26px;color:#172554;margin-top:0">
 📱 WhatsApp the Trainer
 </h3>
 
@@ -1117,7 +1349,6 @@ contact directly on WhatsApp.
 Click below to enquire about the program,
 syllabus and upcoming batch information.
 </p>
-
 
 <a class="btn"
 style="background:#16a34a;color:white"
@@ -1128,9 +1359,8 @@ target="_blank">
 
 </a>
 
-
 <p class="note">
-WhatsApp: 9538716801
+You can contact directly on WhatsApp for course and batch details.
 </p>
 
 </div>
@@ -1140,18 +1370,26 @@ WhatsApp: 9538716801
 </section>
 
 
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
 <div class="wrap">
 
-<strong>DEVOPS • DEVSECOPS • SRE</strong>
+<strong style="font-size:18px">
+DEVOPS • DEVSECOPS • SRE
+</strong>
 
 <p class="small">
 Flagship: 16 Weeks / 80 Hours
 &nbsp; | &nbsp;
 Crash: 6 Weeks / 30 Hours
+</p>
+
+<p class="small">
+Practical Training • Projects • Troubleshooting • Career-Oriented Learning
 </p>
 
 </div>
